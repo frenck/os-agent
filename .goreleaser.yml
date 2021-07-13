@@ -30,7 +30,7 @@ archives:
     files:
       - LICENSE
       - contrib/debian/haos-agent.service
-      - contrib/debian/io.hass.conf
+      - contrib/io.hass.conf
 
 checksum:
   name_template: checksums.txt
@@ -58,7 +58,7 @@ nfpms:
       - src: contrib/debian/haos-agent.service
         dst: /usr/lib/systemd/system/haos-agent.service
         type: config
-      - src: contrib/debian/io.hass.conf
+      - src: contrib/io.hass.conf
         dst: /etc/dbus-1/system.d/io.hass.conf
         type: config
     scripts:
