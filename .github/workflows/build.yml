@@ -38,6 +38,7 @@ jobs:
         args: release --rm-dist
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        FURY_TOKEN: ${{ secrets.FURY_TOKEN }}
 
     # - name: Signing asset amd64
     #   if: github.event_name == 'release'

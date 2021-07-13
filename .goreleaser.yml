@@ -25,7 +25,6 @@ archives:
       386: i386
       amd64: x86_64
       arm64: aarch64
-      armv6: armhf
     wrap_in_directory: true
     files:
       - LICENSE
@@ -53,7 +52,6 @@ nfpms:
       386: i386
       amd64: x86_64
       arm64: aarch64
-      armv6: armhf
     contents:
       - src: contrib/debian/haos-agent.service
         dst: /usr/lib/systemd/system/haos-agent.service
@@ -65,3 +63,8 @@ nfpms:
       postremove: contrib/debian/postremove.sh
 
 release:
+
+publishers:
+  - name: Fury.io
+    dir: "{{ dir .ArtifactPath }}"
+    cmd: curl -F package=@{{ .ArtifactName }} https://{{ .Env.FURY_TOKEN }}@push.fury.io/frenck/
