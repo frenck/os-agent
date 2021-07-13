@@ -10,8 +10,8 @@ env:
   GOLANG_VERSION: "1.15"
 
 jobs:
-  build_debian:
-    name: Build amd64 debian
+  build:
+    name: Build OS-Agent
     runs-on: ubuntu-latest
     container: buildpack-deps:buster
     steps:
