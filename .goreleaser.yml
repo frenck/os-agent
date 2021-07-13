@@ -29,8 +29,8 @@ archives:
     wrap_in_directory: true
     files:
       - LICENSE
-      - contrib/haos-agent.service
-      - contrib/io.hass.conf
+      - contrib/debian/haos-agent.service
+      - contrib/debian/io.hass.conf
 
 checksum:
   name_template: checksums.txt
@@ -55,13 +55,13 @@ nfpms:
       arm64: aarch64
       armv6: armhf
     contents:
-      - src: contrib/haos-agent.service
+      - src: contrib/debian/haos-agent.service
         dst: /usr/lib/systemd/system/haos-agent.service
         type: config
-      - src: contrib/io.hass.conf
+      - src: contrib/debian/io.hass.conf
         dst: /etc/dbus-1/system.d/io.hass.conf
         type: config
     scripts:
-      postinstall: contrib/postinstall.sh
+      postinstall: contrib/debian/postinstall.sh
 
 release:
