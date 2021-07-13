@@ -57,11 +57,11 @@ nfpms:
     contents:
       - src: contrib/debian/haos-agent.service
         dst: /usr/lib/systemd/system/haos-agent.service
-        type: config
       - src: contrib/io.hass.conf
         dst: /etc/dbus-1/system.d/io.hass.conf
-        type: config
     scripts:
       postinstall: contrib/debian/postinstall.sh
+      preremove: contrib/debian/preremove.sh
+      postremove: contrib/debian/postremove.sh
 
 release:
