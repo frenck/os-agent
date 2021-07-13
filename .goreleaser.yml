@@ -17,7 +17,7 @@ builds:
       - arm
       - arm64
     goarm:
-      - 6
+      - 5
       - 7
 
 archives:

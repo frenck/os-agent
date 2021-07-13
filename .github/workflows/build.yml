@@ -49,11 +49,11 @@ jobs:
     #     password: ${{ secrets.VCN_PASSWORD }}
     #     organisation: ${{ secrets.VCN_ORG }}
 
-    # - name: Signing asset armhf
+    # - name: Signing asset armv5
     #   if: github.event_name == 'release'
     #   uses: home-assistant/actions/helpers/codenotary@master
     #   with:
-    #     source: "${{ github.workspace }}/dist/os-agent_linux_arm_6/os-agent"
+    #     source: "${{ github.workspace }}/dist/os-agent_linux_arm_5/os-agent"
     #     user: ${{ secrets.VCN_USER }}
     #     password: ${{ secrets.VCN_PASSWORD }}
     #     organisation: ${{ secrets.VCN_ORG }}
